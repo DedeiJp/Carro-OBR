@@ -1,3 +1,4 @@
+
 #include <HCSR04.h>
 // https://portal.vidadesilicio.com.br/ponte-h-l298n-controle-velocidade-motor/
 // robo seguidor de linha https://www.robocore.net/tutoriais/robo-seguidor-de-linha
@@ -202,26 +203,26 @@ void loop() {
   LE = analogRead(LDRE);
 
     if((LE > 250) && (LD > 250)){
-    	analogWrite(MS1, 80);
-    	analogWrite(MS2, 80);
+      analogWrite(MS1, 80);
+      analogWrite(MS2, 80);
     }
 
     if((LE < 500) && (LD > 500)){
       analogWrite(MS1, 0);
-    	analogWrite(MS2, 100);
+      analogWrite(MS2, 100);
     }
 
     if((LE > 500) && (LD < 500)){
       analogWrite(MS1, 100);
-    	analogWrite(MS2, 0);
+      analogWrite(MS2, 0);
     }
 
     distance1 = LerDist(0);
-    if (distance1 < 20) {
-      Parar(0);
-      delay(5000);
+   if (distance1 < 10) {
+      Desviar();
     }
 
+Serial.println(distance1);
 
 }
 
@@ -380,4 +381,21 @@ for (int i = NUN; i > 0; i--) {
 
 }
 
+}
+
+void Desviar() {
+  Parar(0);
+  delay(100);
+  VirarP(800,100,0);
+  Frente(255,1000);
+  Parar(0);
+  VirarP(800,100,1);
+  Frente(100,10);
+  delay(800);
+  Parar(0);
+  VirarP(600,100,1);
+  Frente(100,10);
+  delay(50);
+  DB(1);
+  return;
 }
