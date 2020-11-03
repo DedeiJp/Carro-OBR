@@ -1,8 +1,5 @@
 
 #include <HCSR04.h>
-// https://portal.vidadesilicio.com.br/ponte-h-l298n-controle-velocidade-motor/
-// robo seguidor de linha https://www.robocore.net/tutoriais/robo-seguidor-de-linha
-
 
  // Inicio
  // 1- Inicia motor desligado
