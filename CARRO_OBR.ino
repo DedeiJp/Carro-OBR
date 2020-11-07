@@ -12,8 +12,8 @@
       - Adição de mais domumentação
 */
 
-// Essa biblioteca facilita a utilização de multiplos ultrasons, mais documentação em: https://github.com/gamegine/HCSR04-ultrasonic-sensor-lib
-#include <HCSR04.h>
+//ALGORÍTMO DESCRITIVO
+
 /*
   Inicio
   1- Inicia motor desligado
@@ -95,6 +95,9 @@
     4.1- Finaliza a função e retorna "1";
   Fim
 */
+
+// Essa biblioteca facilita a utilização de multiplos ultrasons, mais documentação em: https://github.com/gamegine/HCSR04-ultrasonic-sensor-lib
+#include <HCSR04.h>
 
 // Pinos ---------------------------------------
 
